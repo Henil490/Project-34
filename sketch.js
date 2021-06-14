@@ -26,14 +26,14 @@ background(46,139,87);
 if(keyWentDown(UP_ARROW)){
   writeStock(foodS)
   dog.addImage(dogImg2);
-  drawSprites();
+  
   //add styles here
   fill("red");
   text("Food remaining : "+foodS,170,200);
   textSize(10);
   text("Note: Press UP_ARROW Key To Feed Drago Milk!",130,10,300,20);
-
-}
+drawSprites();
+}}
 function readStock(data){
   foodS=data.val();
 }
@@ -49,7 +49,7 @@ database.ref('/').update({
     Food:x
   })
 }
-}
+
 
 
 
